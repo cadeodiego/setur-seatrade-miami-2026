@@ -463,25 +463,7 @@
       border-bottom: 1px solid var(--rule-soft);
       position: relative;
       display: flex; flex-direction: column;
-      overflow: hidden;
     }
-    .meet-card.has-photo { padding-top: 0; }
-    .meet-card .mc-photo {
-      aspect-ratio: 16 / 9;
-      width: calc(100% + 48px);
-      margin: 0 -24px 22px;
-      overflow: hidden;
-      background: var(--creme);
-      border-bottom: 1px solid var(--rule-soft);
-      position: relative;
-    }
-    .meet-card .mc-photo img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-    }
-    .meet-card:hover .mc-photo img { transform: scale(1.035); }
     .meet-card.t-armador { border-top-color: var(--azul-institucional); }
     .meet-card.t-assoc   { border-top-color: var(--azul-profundo); }
     .meet-card.t-tecnico { border-top-color: var(--laranja); }
@@ -710,78 +692,15 @@
     }
     .dl-btn.ghost:hover { background: var(--azul-institucional); color: var(--off-white); }
     .masterplan-showcase .mock {
-      background: var(--preto-suave);
-      aspect-ratio: 16/9;
+      background: var(--creme);
+      aspect-ratio: 3/4;
       display: flex; align-items: center; justify-content: center;
       border: 1px solid var(--rule-soft);
       position: relative;
-      overflow: hidden;
     }
     .masterplan-showcase .mock embed,
     .masterplan-showcase .mock iframe {
       width: 100%; height: 100%; display: block; border: none;
-    }
-    .masterplan-hero {
-      margin: 0 0 36px;
-      background: var(--preto-suave);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--azul-institucional);
-      position: relative;
-      overflow: hidden;
-    }
-    .masterplan-hero img {
-      display: block; width: 100%; height: auto;
-      aspect-ratio: 21/9; object-fit: cover;
-    }
-    .masterplan-hero figcaption {
-      padding: 16px 22px;
-      background: var(--azul-profundo); color: var(--off-white);
-      font-size: 11px; letter-spacing: 1.8px;
-      text-transform: uppercase; font-weight: 600;
-      font-variant-numeric: lining-nums;
-      display: flex; justify-content: space-between; align-items: center; gap: 20px;
-      flex-wrap: wrap;
-    }
-    .masterplan-hero figcaption .cap-title { letter-spacing: 1.2px; }
-    .masterplan-hero figcaption .cap-meta {
-      font-size: 10px; opacity: 0.78; letter-spacing: 2px; font-weight: 700;
-    }
-
-    /* ===== Hero banner (pórtico Seatrade) ===== */
-    .hero-banner {
-      margin: 48px 0 0;
-      position: relative;
-      overflow: hidden;
-      border-top: 3px solid var(--amarelo-institucional);
-    }
-    .hero-banner img {
-      display: block; width: 100%; height: auto;
-      aspect-ratio: 21/8; object-fit: cover;
-      filter: saturate(1.02);
-    }
-    .hero-banner .hb-caption {
-      position: absolute; left: 0; right: 0; bottom: 0;
-      padding: 22px 28px;
-      background: linear-gradient(to top, rgba(12,16,26,0.92) 0%, rgba(12,16,26,0.55) 70%, rgba(12,16,26,0) 100%);
-      color: var(--off-white);
-      display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
-      flex-wrap: wrap;
-    }
-    .hero-banner .hb-caption .hb-title {
-      font-family: 'Fraunces', serif; font-weight: 500; font-style: italic;
-      font-size: 1.25rem; line-height: 1.25;
-      font-variation-settings: 'opsz' 96, 'SOFT' 80;
-      max-width: 38ch;
-    }
-    .hero-banner .hb-caption .hb-meta {
-      font-size: 10px; letter-spacing: 2.4px; font-weight: 700;
-      text-transform: uppercase; opacity: 0.88;
-      font-variant-numeric: lining-nums;
-    }
-    @media (max-width: 860px) {
-      .hero-banner img { aspect-ratio: 4/3; }
-      .masterplan-hero img { aspect-ratio: 16/9; }
-      .hero-banner .hb-caption .hb-title { font-size: 1rem; }
     }
 
     /* ===== Prospection funnel ===== */
@@ -1283,16 +1202,8 @@
         <div class="hero-signature">
           <div class="kicker">Leitura da Missão</div>
           <blockquote>Mais do que apresentar um projeto, a missão posicionou Itajaí <em>internacionalmente como destino</em>, como oportunidade de investimento e como polo estratégico do turismo de cruzeiros.</blockquote>
-          <div class="cite">Diego Oliveira<br><span style="opacity: 0.75; font-weight: 500;">Diretor Executivo de Turismo e Eventos de Itajaí</span></div>
+          <div class="cite">— Diretoria Executiva de Turismo e Eventos de Itajaí</div>
         </div>
-
-        <figure class="hero-banner" aria-label="Pórtico da Seatrade Cruise Global 2026">
-          <img src="assets/fotos/portico-seatrade.jpg" alt="Entrada da Seatrade Cruise Global 2026 — Miami Beach Convention Center" loading="lazy">
-          <figcaption class="hb-caption">
-            <div class="hb-title">Miami Beach Convention Center · <em>onde o setor mundial de cruzeiros se encontrou em abril de 2026</em></div>
-            <div class="hb-meta">41ª edição · 13–16 abril</div>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
@@ -1310,22 +1221,22 @@
 
         <div class="findings">
           <article class="finding">
-            <div class="finding-num">01</div>
+            <div class="finding-num">movimento i</div>
             <h3>O Masterplan entrou na agenda global.</h3>
             <p>Apresentação técnica do plano diretor — elaborado pela <span class="num">WSP</span> em parceria com o <span class="num">Instituto Mais Itajaí</span> — gerou interesse concreto de armadoras e operadores. A <span class="num">Global Ports Holding</span>, maior grupo de operação de terminais de cruzeiros do mundo, sinalizou interesse em Itajaí como possível novo destino.</p>
           </article>
           <article class="finding">
-            <div class="finding-num">02</div>
+            <div class="finding-num">movimento ii</div>
             <h3>Pacificação de relações com MSC e Costa.</h3>
             <p>A missão apoiou Itajaí no <span class="num">estreitamento de laços</span> com as duas maiores operadoras atuais da temporada brasileira. Apresentação do <em>layout</em> da próxima temporada + Masterplan consolidou confiança e abriu caminho para continuidade operacional qualificada.</p>
           </article>
           <article class="finding">
-            <div class="finding-num">03</div>
+            <div class="finding-num">movimento iii</div>
             <h3>Royal Caribbean reabre janela de retorno ao Brasil.</h3>
             <p>Reunião com <span class="num">André Pousada</span>, VP Regional de Relações Governamentais, sinalizou possibilidade futura de retorno do grupo ao país — com interesse específico em Itajaí. Em diálogo, também foi apontado potencial da <em>Silversea</em>, marca do mesmo grupo, para operação no destino.</p>
           </article>
           <article class="finding">
-            <div class="finding-num">04</div>
+            <div class="finding-num">movimento iv</div>
             <h3>Aprendizados de Miami aplicados no Masterplan.</h3>
             <p>Visitas técnicas aos terminais <span class="num">AA (MSC)</span> e <span class="num">B (NCL)</span> trouxeram referências concretas de fluxos, segurança, embarque, desembarque e experiência do passageiro — aplicáveis diretamente ao desenho do terminal definitivo e à qualificação da próxima temporada.</p>
           </article>
@@ -1430,27 +1341,27 @@
 
         <div class="objectives-grid">
           <div class="objective">
-            <span class="obj-num">01</span>
+            <span class="obj-num">i</span>
             <h3>Apresentar o Masterplan</h3>
             <p>Apresentação técnica do plano diretor do futuro terminal, elaborado pela WSP em parceria com o Instituto Mais Itajaí.</p>
           </div>
           <div class="objective">
-            <span class="obj-num">02</span>
+            <span class="obj-num">ii</span>
             <h3>Posicionar Itajaí como hub</h3>
             <p>Defender o papel da cidade como ponto de conexão regional — Navegantes, Balneário Camboriú, Penha, Bombinhas e acessibilidade rodoviária ao Sul.</p>
           </div>
           <div class="objective">
-            <span class="obj-num">03</span>
+            <span class="obj-num">iii</span>
             <h3>Promover o destino</h3>
             <p>Apresentação dos atrativos turísticos, infraestrutura receptiva, planejamento e diferenciais competitivos de Itajaí como destino.</p>
           </div>
           <div class="objective">
-            <span class="obj-num">04</span>
+            <span class="obj-num">iv</span>
             <h3>Fortalecer relações</h3>
             <p>Reuniões estratégicas com operadoras, terminais, investidores e entidades do setor para adensar o relacionamento institucional.</p>
           </div>
           <div class="objective">
-            <span class="obj-num">05</span>
+            <span class="obj-num">v</span>
             <h3>Prospectar oportunidades</h3>
             <p>Abertura de diálogos sobre novas operações, evolução do receptivo e modelo futuro do terminal.</p>
           </div>
@@ -1527,8 +1438,7 @@
         </div>
 
         <div class="meet-grid">
-          <article class="meet-card t-armador has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-royal-caribbean.jpg" alt="Reunião com Royal Caribbean" loading="lazy"></div>
+          <article class="meet-card t-armador">
             <div class="mc-brand">Royal Caribbean</div>
             <div class="mc-kind">Armadora · EUA</div>
             <div class="mc-part">
@@ -1540,8 +1450,7 @@
             <span class="mc-tag hub">Janela de retorno aberta</span>
           </article>
 
-          <article class="meet-card t-armador has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-msc.jpg" alt="Reunião com MSC Cruzeiros" loading="lazy"></div>
+          <article class="meet-card t-armador">
             <div class="mc-brand">MSC Cruzeiros</div>
             <div class="mc-kind">Armadora · Itália/Suíça</div>
             <div class="mc-part">
@@ -1580,8 +1489,7 @@
         </div>
 
         <div class="meet-grid">
-          <article class="meet-card t-assoc has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-clia.jpg" alt="Reunião com CLIA Brasil" loading="lazy"></div>
+          <article class="meet-card t-assoc">
             <div class="mc-brand">CLIA Brasil</div>
             <div class="mc-kind">Associação · cruzeiros marítimos</div>
             <div class="mc-part">
@@ -1592,8 +1500,7 @@
             <span class="mc-tag partner">Articulação-chave</span>
           </article>
 
-          <article class="meet-card t-assoc has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-embratur.jpg" alt="Reunião com Embratur" loading="lazy"></div>
+          <article class="meet-card t-assoc">
             <div class="mc-brand">Embratur</div>
             <div class="mc-kind">Órgão federal · promoção internacional</div>
             <div class="mc-part">
@@ -1623,8 +1530,7 @@
         </div>
 
         <div class="meet-grid">
-          <article class="meet-card t-tecnico has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-gph.jpg" alt="Reunião com Global Ports Holding" loading="lazy"></div>
+          <article class="meet-card t-tecnico">
             <div class="mc-brand">Global Ports Holding</div>
             <div class="mc-kind">Operador de terminal · capital privado</div>
             <div class="mc-part">
@@ -1635,8 +1541,7 @@
             <span class="mc-tag investor">Investidor potencial</span>
           </article>
 
-          <article class="meet-card t-tecnico has-photo">
-            <div class="mc-photo"><img src="assets/fotos/encontro-wsp.jpg" alt="Reunião com WSP no estande" loading="lazy"></div>
+          <article class="meet-card t-tecnico">
             <div class="mc-brand">WSP</div>
             <div class="mc-kind">Engenharia · autora do Masterplan</div>
             <div class="mc-part">
@@ -1723,9 +1628,9 @@
           </ul>
 
           <div class="photo-grid three">
-            <div class="photo-cell"><img src="assets/fotos/visita-ncl-arquitetura.jpg" alt="Terminal NCL · arquitetura moderna" loading="lazy"></div>
-            <div class="photo-cell"><img src="assets/fotos/visita-ncl-fluxo.jpg" alt="Terminal NCL · fluxo operacional" loading="lazy"></div>
-            <div class="photo-cell"><img src="assets/fotos/visita-ncl-experiencia.jpg" alt="Terminal NCL · experiência do passageiro" loading="lazy"></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal NCL</div><div class="placeholder-hint">fachada · acesso</div><div class="placeholder-file">visita-ncl-01.jpg</div></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal NCL</div><div class="placeholder-hint">interior · operação</div><div class="placeholder-file">visita-ncl-02.jpg</div></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Delegação Itajaí</div><div class="placeholder-hint">comitiva CLIA Brasil</div><div class="placeholder-file">visita-ncl-03.jpg</div></div>
           </div>
         </div>
 
@@ -1754,9 +1659,9 @@
           </ul>
 
           <div class="photo-grid three">
-            <div class="photo-cell"><img src="assets/fotos/visita-msc-exterior.jpg" alt="Terminal AA MSC · exterior" loading="lazy"></div>
-            <div class="photo-cell"><img src="assets/fotos/visita-msc-interior.jpg" alt="Terminal AA MSC · interior e operação" loading="lazy"></div>
-            <div class="photo-cell"><img src="assets/fotos/visita-msc-delegacao.jpg" alt="Delegação Itajaí no Terminal AA MSC" loading="lazy"></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal MSC</div><div class="placeholder-hint">fachada · visão geral</div><div class="placeholder-file">visita-msc-01.jpg</div></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal MSC</div><div class="placeholder-hint">fluxo operacional</div><div class="placeholder-file">visita-msc-02.jpg</div></div>
+            <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Delegação Itajaí</div><div class="placeholder-hint">visita técnica MSC</div><div class="placeholder-file">visita-msc-03.jpg</div></div>
           </div>
         </div>
       </div>
@@ -1773,14 +1678,6 @@
             <p class="standfirst">O Masterplan — plano diretor completo do futuro Terminal de Cruzeiros de Itajaí — foi a referência central de todas as conversas. Elaborado pela WSP em parceria com o Instituto Mais Itajaí, ele traduz a visão estratégica da cidade em peça técnica de padrão internacional.</p>
           </div>
         </div>
-
-        <figure class="masterplan-hero" aria-label="Visualização do Masterplan do Terminal de Cruzeiros de Itajaí">
-          <img src="assets/fotos/masterplan-visualizacao.jpg" alt="Visualização arquitetônica do novo Terminal de Cruzeiros de Itajaí — Masterplan 2026" loading="lazy">
-          <figcaption>
-            <span class="cap-title">Visualização · Novo Terminal de Cruzeiros de Itajaí</span>
-            <span class="cap-meta">WSP · Instituto Mais Itajaí · SETUR</span>
-          </figcaption>
-        </figure>
 
         <div class="masterplan-showcase">
           <div class="txt">
@@ -2151,11 +2048,57 @@
       </div>
     </section>
 
-    <!-- ANEXO A2 — Materiais institucionais -->
+    <!-- ANEXO A2 — Galeria fotográfica -->
     <section class="annex" data-reveal>
       <div class="container">
         <div class="annex-head">
           <div class="annex-tag">Anexo A2</div>
+          <div>
+            <div class="section-kicker">Galeria fotográfica</div>
+            <h2>Registro visual da missão Itajaí em Miami.</h2>
+            <p class="annex-note">Seleção editorial de imagens da delegação, reuniões, visitas técnicas e apresentações institucionais. O guia completo de nomes de arquivo está em <code style="font-size: 11px; background: var(--creme); padding: 2px 6px;">FOTOS-MAPA.md</code> na raiz do repositório.</p>
+          </div>
+        </div>
+
+        <h4 style="font-size: 10px; letter-spacing: 2.4px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 14px; margin-top: 8px;">Delegação e chegada</h4>
+        <div class="photo-grid">
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Delegação</div><div class="placeholder-hint">chegada · Miami</div><div class="placeholder-file">galeria-delegacao-01.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Credenciamento</div><div class="placeholder-hint">feira</div><div class="placeholder-file">galeria-delegacao-02.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Primeiro dia</div><div class="placeholder-hint">delegação na feira</div><div class="placeholder-file">galeria-delegacao-03.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Equipe</div><div class="placeholder-hint">preparação</div><div class="placeholder-file">galeria-delegacao-04.jpg</div></div>
+        </div>
+
+        <h4 style="font-size: 10px; letter-spacing: 2.4px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); margin: 32px 0 14px;">Reuniões com armadoras</h4>
+        <div class="photo-grid">
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião armadora</div><div class="placeholder-hint">—</div><div class="placeholder-file">galeria-armadoras-01.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião armadora</div><div class="placeholder-hint">—</div><div class="placeholder-file">galeria-armadoras-02.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião armadora</div><div class="placeholder-hint">—</div><div class="placeholder-file">galeria-armadoras-03.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião armadora</div><div class="placeholder-hint">—</div><div class="placeholder-file">galeria-armadoras-04.jpg</div></div>
+        </div>
+
+        <h4 style="font-size: 10px; letter-spacing: 2.4px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); margin: 32px 0 14px;">Visitas técnicas e instituições</h4>
+        <div class="photo-grid">
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal MSC</div><div class="placeholder-hint">visita técnica</div><div class="placeholder-file">galeria-institucional-01.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Terminal NCL</div><div class="placeholder-hint">visita técnica</div><div class="placeholder-file">galeria-institucional-02.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião GPH / CLIA / Embratur</div><div class="placeholder-hint">instituições</div><div class="placeholder-file">galeria-institucional-03.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Reunião ATERC / Meyer / TKE</div><div class="placeholder-hint">técnicos</div><div class="placeholder-file">galeria-institucional-04.jpg</div></div>
+        </div>
+
+        <h4 style="font-size: 10px; letter-spacing: 2.4px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); margin: 32px 0 14px;">Apresentações e estande</h4>
+        <div class="photo-grid">
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Apresentação Masterplan</div><div class="placeholder-hint">Robson · projeto</div><div class="placeholder-file">galeria-apresentacao-01.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Estande Invest Itajaí</div><div class="placeholder-hint">ativação</div><div class="placeholder-file">galeria-apresentacao-02.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Momento institucional</div><div class="placeholder-hint">feira</div><div class="placeholder-file">galeria-apresentacao-03.jpg</div></div>
+          <div class="photo-cell"><svg class="placeholder-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M3 17l4-4 5 4 4-3 5 3"/></svg><div class="placeholder-lbl">Encerramento</div><div class="placeholder-hint">missão · Miami</div><div class="placeholder-file">galeria-apresentacao-04.jpg</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANEXO A3 — Materiais institucionais -->
+    <section class="annex" data-reveal>
+      <div class="container">
+        <div class="annex-head">
+          <div class="annex-tag">Anexo A3</div>
           <div>
             <div class="section-kicker">Materiais institucionais</div>
             <h2>Peças utilizadas pela delegação na Seatrade 2026.</h2>
@@ -2196,11 +2139,11 @@
       </div>
     </section>
 
-    <!-- ANEXO A3 — Composição da missão -->
+    <!-- ANEXO A4 — Composição da missão -->
     <section class="annex" data-reveal>
       <div class="container">
         <div class="annex-head">
-          <div class="annex-tag">Anexo A3</div>
+          <div class="annex-tag">Anexo A4</div>
           <div>
             <div class="section-kicker">Composição e apoios da missão</div>
             <h2>Articulação conjunta entre <em>três instituições</em> de Itajaí.</h2>

@@ -1,0 +1,10 @@
+.DS_Store
+**/.DS_Store
+
+# Originais brutos (HEICs, fotos fora do padrão canônico) — não publicar
+assets/fotos/Imagens  Seatrade/
+assets/fotos/Terminal AA MSC Miami/
+assets/fotos/Terminal NCL - imagens /
+assets/fotos/*.HEIC
+assets/fotos/*.heic
+assets/fotos/*.jpeg
