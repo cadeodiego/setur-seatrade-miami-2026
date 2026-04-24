@@ -76,15 +76,7 @@
       position: relative; z-index: 3; gap: 24px;
     }
     .masthead-brand { display: flex; align-items: center; gap: 20px; }
-    .masthead-brand .crest-wrap {
-      background: var(--off-white);
-      padding: 7px 12px;
-      border-radius: 2px;
-      display: flex; align-items: center;
-      flex-shrink: 0;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
-    }
-    .masthead-brand .crest { height: 36px; width: auto; display: block; flex-shrink: 0; }
+    .masthead-brand .crest { height: 40px; width: auto; display: block; flex-shrink: 0; }
     .masthead-brand .crest-divider {
       width: 1px; height: 36px; background: rgba(255, 217, 26, 0.5); flex-shrink: 0;
     }
@@ -485,8 +477,7 @@
       display: flex; flex-direction: column;
       overflow: hidden;
     }
-    .meet-card.has-photo,
-    .meet-card.has-marker { padding-top: 0; }
+    .meet-card.has-photo { padding-top: 0; }
     .meet-card .mc-photo {
       aspect-ratio: 16 / 9;
       width: calc(100% + 48px);
@@ -507,39 +498,6 @@
     .meet-card.t-assoc   { border-top-color: var(--azul-profundo); }
     .meet-card.t-tecnico { border-top-color: var(--laranja); }
     .meet-card.t-outros  { border-top-color: var(--verde); }
-
-    /* Marker visual pros cards sem foto — mantém uniformidade com .mc-photo */
-    .meet-card .mc-marker {
-      aspect-ratio: 16 / 9;
-      width: calc(100% + 48px);
-      margin: 0 -24px 22px;
-      border-bottom: 1px solid var(--rule-soft);
-      position: relative;
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 10px;
-      color: var(--off-white);
-    }
-    .meet-card .mc-marker::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
-                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 0%, transparent 45%);
-      pointer-events: none;
-    }
-    .meet-card .mc-marker svg {
-      width: 36px; height: 36px; stroke: currentColor; fill: none;
-      stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round;
-      opacity: 0.92; position: relative; z-index: 1;
-    }
-    .meet-card .mc-marker .mk-label {
-      font-size: 10px; letter-spacing: 2.8px; font-weight: 700;
-      text-transform: uppercase; opacity: 0.88;
-      font-variant-numeric: lining-nums; position: relative; z-index: 1;
-    }
-    .meet-card.t-armador .mc-marker { background: linear-gradient(135deg, #16295B 0%, #1F3A7A 100%); }
-    .meet-card.t-assoc   .mc-marker { background: linear-gradient(135deg, #2D6AAA 0%, #1F4E83 100%); }
-    .meet-card.t-tecnico .mc-marker { background: linear-gradient(135deg, #4DAEC4 0%, #2D6AAA 100%); }
 
     .meet-card .mc-brand {
       font-family: 'Fraunces', serif; font-weight: 500;
@@ -1260,9 +1218,7 @@
 
   <header class="masthead" role="banner">
     <div class="masthead-brand">
-      <div class="crest-wrap">
-        <img class="crest" src="assets/brasao-setur-oficial.png" alt="Secretaria Municipal de Turismo e Eventos de Itajaí">
-      </div>
+      <img class="crest" src="assets/brasao-setur-branco.png" alt="Secretaria Municipal de Turismo e Eventos de Itajaí">
       <div class="crest-divider" aria-hidden="true"></div>
       <div class="lockup">
         <div class="kicker">Missão Técnica · Abril 2026</div>
@@ -1585,11 +1541,7 @@
             <span class="mc-tag pacify">Pacificação de relação</span>
           </article>
 
-          <article class="meet-card t-armador has-marker">
-            <div class="mc-marker" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M24 10v30M14 24h20M10 28c0 8 6.3 14 14 14s14-6 14-14"/><circle cx="24" cy="10" r="3"/></svg>
-              <span class="mk-label">Armadora · Costa Cruzeiros</span>
-            </div>
+          <article class="meet-card t-armador">
             <div class="mc-brand">Costa Cruzeiros</div>
             <div class="mc-kind">Armadora · Itália</div>
             <div class="mc-part">
@@ -1624,11 +1576,7 @@
             <span class="mc-tag partner">Agenda federal</span>
           </article>
 
-          <article class="meet-card t-assoc has-marker">
-            <div class="mc-marker" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c5 5 8 11 8 18s-3 13-8 18M24 6c-5 5-8 11-8 18s3 13 8 18"/></svg>
-              <span class="mk-label">Associação · ATERC Brasil</span>
-            </div>
+          <article class="meet-card t-assoc">
             <div class="mc-brand">ATERC Brasil</div>
             <div class="mc-kind">Associação · terminais de cruzeiros</div>
             <div class="mc-part">
@@ -1651,11 +1599,7 @@
             <span class="mc-tag investor">Investidor potencial</span>
           </article>
 
-          <article class="meet-card t-tecnico has-marker">
-            <div class="mc-marker" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M8 40V14l16-8 16 8v26M8 40h32M16 40V26h16v14M20 20h8M20 24h8"/></svg>
-              <span class="mk-label">Engenharia · WSP (autora do Masterplan)</span>
-            </div>
+          <article class="meet-card t-tecnico">
             <div class="mc-brand">WSP</div>
             <div class="mc-kind">Engenharia · autora do Masterplan</div>
             <div class="mc-part">
@@ -1666,11 +1610,7 @@
             <span class="mc-tag partner">Parceira técnica</span>
           </article>
 
-          <article class="meet-card t-tecnico has-marker">
-            <div class="mc-marker" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 12 0 4 3 4 3M4 38c4-3 8-3 12 0s8 3 12 0 8-3 12 0 4 3 4 3"/><path d="M10 32V18a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v14"/><rect x="18" y="20" width="5" height="6"/><rect x="25" y="20" width="5" height="6"/></svg>
-              <span class="mk-label">Soluções flutuantes · Meyer</span>
-            </div>
+          <article class="meet-card t-tecnico">
             <div class="mc-brand">Meyer Floating Solutions</div>
             <div class="mc-kind">Soluções flutuantes · Alemanha</div>
             <div class="mc-part">
@@ -1681,11 +1621,7 @@
             <span class="mc-tag premium">Solução inovadora</span>
           </article>
 
-          <article class="meet-card t-tecnico has-marker">
-            <div class="mc-marker" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M11 37l4-4M33 15l4-4"/></svg>
-              <span class="mk-label">Equipamentos portuários · TKE</span>
-            </div>
+          <article class="meet-card t-tecnico">
             <div class="mc-brand">TKE Port Solutions</div>
             <div class="mc-kind">Equipamentos portuários · Espanha</div>
             <div class="mc-part">
